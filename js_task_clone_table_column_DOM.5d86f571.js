@@ -1,0 +1,2 @@
+"use strict";document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector("table"),r=e.querySelector("thead"),t=e.querySelector("tfoot"),n=e.querySelector("tbody");function o(e){e&&Array.from(e.querySelectorAll("tr")).forEach(function(e){if(e.children.length>1){var r=e.children[1].cloneNode(!0);e.insertBefore(r,e.children[e.children.length-1])}})}o(r),o(t),o(n)});
+//# sourceMappingURL=js_task_clone_table_column_DOM.5d86f571.js.map

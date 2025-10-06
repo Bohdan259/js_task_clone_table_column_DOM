@@ -1,11 +1,16 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const thead = document.querySelector('thead');
-  const tfoot = document.querySelector('tfoot');
-  const tbody = document.querySelector('tbody');
+  const table = document.querySelector('table');
+  const thead = table.querySelector('thead');
+  const tfoot = table.querySelector('tfoot');
+  const tbody = table.querySelector('tbody');
 
   function cloneColumn(section) {
+    if (!section) {
+      return;
+    }
+
     const trAll = Array.from(section.querySelectorAll('tr'));
 
     trAll.forEach((tr) => {

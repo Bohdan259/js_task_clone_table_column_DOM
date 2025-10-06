@@ -2,6 +2,11 @@
 
 document.addEventListener('DOMContentLoaded', function () {
   const table = document.querySelector('table');
+
+  if (!table) {
+    return;
+  }
+
   const thead = table.querySelector('thead');
   const tfoot = table.querySelector('tfoot');
   const tbody = table.querySelector('tbody');
@@ -23,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  cloneColumn(thead);
-  cloneColumn(tfoot);
-  cloneColumn(tbody);
+  const sections = [thead, tfoot, tbody];
+
+  sections.forEach((section) => cloneColumn(section));
 });
